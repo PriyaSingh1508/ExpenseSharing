@@ -1,0 +1,66 @@
+
+<mat-card class="card card-big">
+    <mat-card-header>
+        <mat-card-title>Add New Expense</mat-card-title>
+      </mat-card-header>
+        <form [formGroup]="addExpenseForm" (ngSubmit)="addExpense()">
+
+          <div class="form-container">
+           
+            <mat-form-field >
+              <mat-label>GroupId</mat-label>
+              <input formControlName="groupId" matInput type="number">
+              <mat-hint class="errors" *ngIf="addExpenseForm.get('groupId')?.invalid && (addExpenseForm.get('groupId')?.dirty || addExpenseForm.get('groupId')?.touched) && addExpenseForm.get('groupId')?.errors?.['required']">
+                GroupId is required
+              </mat-hint>
+            </mat-form-field>           
+            
+            <mat-form-field >
+              <mat-label>Description</mat-label>
+              <input  formControlName="description" matInput>
+              <mat-hint class="errors" *ngIf="addExpenseForm.get('description')?.invalid && (addExpenseForm.get('description')?.dirty || addExpenseForm.get('description')?.touched) && addExpenseForm.get('description')?.errors?.['required']">
+                Description is required
+              </mat-hint>
+            </mat-form-field>
+
+            <mat-form-field >
+                <mat-label>Amount</mat-label>
+                <input  formControlName="amount" matInput type="number">
+                <mat-hint class="errors" *ngIf="addExpenseForm.get('amount')?.invalid && (addExpenseForm.get('amount')?.dirty || addExpenseForm.get('amount')?.touched) && addExpenseForm.get('amount')?.errors?.['required']">
+                  Amount is required
+                </mat-hint>
+              </mat-form-field>
+              <mat-form-field>
+                <mat-label>Paid By</mat-label>
+                <input formControlName="paidBy" matInput>
+                <mat-hint class="errors" *ngIf="addExpenseForm.get('paidBy')?.invalid && (addExpenseForm.get('paidBy')?.dirty || addExpenseForm.get('paidBy')?.touched) && addExpenseForm.get('paidBy')?.errors?.['required']">
+                  Paid By is required
+                </mat-hint>
+              </mat-form-field>
+        
+              <mat-form-field>
+                <mat-label>Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+                <mat-hint class="errors" *ngIf="addExpenseForm.get('date')?.invalid && (addExpenseForm.get('date')?.dirty || addExpenseForm.get('date')?.touched) && addExpenseForm.get('date')?.errors?.['required']">
+                  Date is required
+                </mat-hint>
+              </mat-form-field>
+              
+        
+              <mat-form-field>
+                <mat-label>Split Among</mat-label>
+                <input formControlName="splitAmong" matInput>
+                <mat-hint class="errors" *ngIf="addExpenseForm.get('splitAmong')?.invalid && (addExpenseForm.get('splitAmong')?.dirty || addExpenseForm.get('splitAmong')?.touched) && addExpenseForm.get('splitAmong')?.errors?.['required']">
+                  Split Among is required
+                </mat-hint>
+              </mat-form-field>
+            <button  [disabled]="!addExpenseForm.valid" mat-raised-button color="primary">
+              <mat-icon> add</mat-icon>Submit
+            </button>
+        
+        </div>
+
+        </form>
+</mat-card>

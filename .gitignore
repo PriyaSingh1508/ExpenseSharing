@@ -1,0 +1,92 @@
+# .NET specific ignores
+**/bin/
+**/obj/
+**/node_modules/
+**/.vs/
+**/.vscode/
+**/.idea/
+**/.angular/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.log
+*.tlog
+*.lastcodeanalysissucceeded
+*.ide
+*.ilk
+*.pdb
+*.log
+*.cache
+*.hmap
+*.db
+*.opendb
+
+# Build directories
+/bin
+/obj
+
+# NuGet packages
+*.nupkg
+*.snupkg
+
+# Lock files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Visual Studio 2019+
+.vscode/
+.vscode/*
+.vscode/.*
+*.code-workspace
+
+# Rider
+.idea
+.idea/*
+
+# ReSharper
+_ReSharper.Caches/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Azure Function local settings file
+local.settings.json
+
+# DotNetLocal
+.vs
+
+# Azure Function / Kudu Jobs settings
+function_deployment.json
+
+# Backup & Report Files
+*_BACKUP_*
+*_EXTERNAL_*
+*_PENDING_*
+
+# IIS Logs
+IISExpress/logs
+
+# Publishing directories
+publish/
+out/
+artifacts/
+
+# MSTest test results
+TestResults
+
+# NCrunch
+NCrunch
+
+# Azure Pipeline
+*.coverage
+*.coveragexml
+
+# Mono Auto Generated Files
+mono_crash.*

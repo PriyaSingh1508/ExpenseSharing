@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.card{
+    width: 60%;
+    border-radius: 25px;
+    max-width: 100rem;
+    height:fit-content;
+    max-width: 100%;
+    min-width: 25rem;    
+}
+
+.form-container{
+    width: 100%
+}
+
+
+mat-form-field {
+    width: 90%;
+    border-radius: 50px;
+
+  }
+input{
+    border-radius: 50px;
+}
+
+button{
+    border-radius: 50px;
+}
+
+.errors{
+    color: red;
+
+}

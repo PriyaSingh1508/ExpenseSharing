@@ -1,0 +1,38 @@
+<div class="container">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef> <b>No.</b> </th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+    <!-- Name Column -->
+    <ng-container matColumnDef="groupName">
+      <th mat-header-cell *matHeaderCellDef> <b>Group Name</b> </th>
+      <td mat-cell *matCellDef="let element"> {{element.groupName}} </td>
+    </ng-container>
+ 
+    <ng-container matColumnDef="groupDescription">
+      <th mat-header-cell *matHeaderCellDef> <b>Description</b></th>
+      <td mat-cell *matCellDef="let element"> {{element.groupDescription}} </td>
+    </ng-container>
+    <ng-container matColumnDef="groupCreatedDate">
+        <th mat-header-cell *matHeaderCellDef> <b>Created Date</b></th>
+        <td mat-cell *matCellDef="let element"> {{element.groupCreatedDate | date:'dd-MM-yyyy'}} </td>
+    </ng-container>
+    
+      <ng-container matColumnDef="teamMembers">
+        <th mat-header-cell *matHeaderCellDef> <b>TeamMembers</b></th>
+        <td mat-cell *matCellDef="let element"> {{element.teamMembers}} </td>
+      </ng-container>
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef><b> Action</b> </th>
+      <td mat-cell *matCellDef="let element"> <button mat-raised-button (click)="onExpenses(element.id)" class="varButton">Expenses</button>&nbsp;&nbsp;<button mat-raised-button (click)="onGroupDelete(element.id)" class="varButton">DeleteGrp</button></td>
+    </ng-container>
+ 
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <div class="add-group">
+    <button mat-raised-button (click)="createGroup()" >+ New Group</button>
+  </div>
+</div>

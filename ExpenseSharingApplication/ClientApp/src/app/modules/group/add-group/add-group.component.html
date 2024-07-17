@@ -1,0 +1,40 @@
+
+    <mat-card class="card card-big">
+        <mat-card-header>
+            <mat-card-title>Add New Group</mat-card-title>
+          </mat-card-header>
+            <form [formGroup]="addGroupForm" (ngSubmit)="addGroup()">
+    
+              <div class="form-container">
+               
+                <mat-form-field >
+                  <mat-label>Name</mat-label>
+                  <input formControlName="name" matInput >
+                  <mat-hint class="errors" *ngIf="addGroupForm.get('name')?.invalid && (addGroupForm.get('name')?.dirty || addGroupForm.get('name')?.touched) && addGroupForm.get('name')?.errors?.['required']">
+                    Name is required
+                  </mat-hint>
+                </mat-form-field>           
+                
+                <mat-form-field >
+                  <mat-label>Description</mat-label>
+                  <input  formControlName="description" matInput>
+                  <mat-hint class="errors" *ngIf="addGroupForm.get('description')?.invalid && (addGroupForm.get('description')?.dirty || addGroupForm.get('description')?.touched) && addGroupForm.get('description')?.errors?.['required']">
+                    Description is required
+                  </mat-hint>
+                </mat-form-field>
+
+                <mat-form-field >
+                    <mat-label>Team Members Email</mat-label>
+                    <input  formControlName="teamMembers" matInput>
+                    <mat-hint class="errors" *ngIf="addGroupForm.get('teamMembers')?.invalid && (addGroupForm.get('teamMembers')?.dirty || addGroupForm.get('teamMembers')?.touched) && addGroupForm.get('teamMembers')?.errors?.['required']">
+                      Team Members is required and members email must be separated by comman
+                    </mat-hint>
+                  </mat-form-field>
+                <button  [disabled]="!addGroupForm.valid" mat-raised-button color="primary">
+                  <mat-icon> add</mat-icon>Submit
+                </button>
+            
+            </div>
+    
+            </form>
+    </mat-card>

@@ -1,0 +1,7 @@
+.mat-primary .mat-button-wrapper {
+    background-color: green;
+    color: white;
+}
+.add-expense{
+    margin-top: 2px;
+}

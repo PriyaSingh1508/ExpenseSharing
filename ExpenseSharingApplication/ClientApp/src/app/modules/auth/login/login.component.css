@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.page-container{
+    height: 85vh;
+    width: 92vw;
+    color: #eee;
+    background: linear-gradient(0deg, rgba(212,117,105,1) 0%, rgba(103,58,183,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 60%;
+    border-radius: 25px;
+    max-width: 100rem;
+    height:fit-content;
+    max-width: 100%;
+    min-width: 25rem;
+    background-color:#eee ;
+    
+}
+
+.form-container{
+    width: 100%
+}
+
+
+mat-form-field {
+    width: 90%;
+    border-radius: 50px;
+
+  }
+input{
+    border-radius: 50px;
+}
+
+button{
+    border-radius: 50px;
+}
+
+.errors{
+    color: red;
+
+}
+
+img{
+   
+    height: 100%;
+}
